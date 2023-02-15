@@ -1,3 +1,10 @@
+:root {
+    --dark-gray-color: #3B3735;
+    --light-gray-color: #707070;
+    --white-color: #ffffff;
+    --primary_color: #E76F51;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -12,6 +19,228 @@ html {
 
 body {
     font-family: "Roboto-Regular";
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.2;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ******************** */
+/*       Header         */
+/* ******************** */
+.header {
+    background: linear-gradient(rgba(59, 55, 53, 0.5), rgba(59, 55, 53, 0.5)), url(../img/jpg/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    height: 80vh;
+    position: relative;
+}
+
+/* ******************** */
+/*      Naviagtion      */
+/* ******************** */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+
+/* ******************** */
+/* Naviagtion-mobile-btn */
+/* ******************** */
+
+.nav-btn {
+    background-color: var(--white-color);
+    border-radius: 2rem;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+.nav-btn--line {
+    display: block;
+    width: 3.6rem;
+    height: 0.3rem;
+    background-color: var(--primary_color);
+    border-radius: 2rem;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+
+}
+
+
+
+.nav-btn--line::before,
+.nav-btn--line::after {
+    content: " ";
+    width: 3.6rem;
+    height: 0.3rem;
+    background-color: var(--primary_color);
+    border-radius: 2rem;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.nav-btn--line::before {
+    top: -1rem;
+}
+
+.nav-btn--line::after {
+    top: 1rem;
+}
+
+.nav-btn--open .nav-btn--line {
+    background-color: transparent;
+}
+
+.nav-btn--open .nav-btn--line::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.nav-btn--open .nav-btn--line::after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ******************** */
+/*         logo         */
+/* ******************** */
+
+.logo__img {
+    height: 5rem;
+}
+
+/* ******************** */
+/*     mobile-menu      */
+/* ******************** */
+
+.menu-mobile {
+    background-color: #3B3735;
+    position: fixed;
+    top: 0;
+    left: -750px;
+    bottom: 0;
+    width: 32rem;
+    padding: 4rem 1rem 0 2rem;
+}
+
+.menu-mobile--open {
+    left: 0;
+}
+
+.menu-mobile__item {
+    margin-bottom: 2rem;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+
+.menu-mobile__link {
+    color: var(--white-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-mobile__link:hover {
+    margin-left: 3rem;
+}
+
+.menu-mobile__link:hover::before {
+    content: " ";
+    background-color: var(--primary_color);
+    width: 2.5rem;
+    height: 0.2rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+
+.menu-buttons-mobile {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-buttons-mobile__link {
+    color: var(--white-color);
+    padding: 1rem 4rem;
+}
+
+.menu-buttons-mobile__link--border {
+    border: 1px solid var(--white-color);
+    border-radius: 5rem;
+}
+
+
+/* ******************** */
+/*    desktop-menu      */
+/* ******************** */
+
+.menu-desktop__list {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.menu-desktop__item {
+    margin-left: 1.6rem;
+    z-index: 10;
+}
+
+
+.menu-desktop__link {
+    color: var(--white-color);
+}
+
+.menu-desktop__link--active {
+    position: relative;
+}
+
+.menu-desktop__link--active::before {
+    position: absolute;
+    content: " ";
+    background-color: var(--primary_color);
+    width: 3.2rem;
+    height: 0.24rem;
+    top: 0.7rem;
+    left: 0.4rem;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.menu-buttons {
+    display: flex;
+    margin-left: auto;
+}
+
+.menu-buttons__link {
+    color: var(--white-color);
+    margin-right: 1.4rem;
+    padding: 1rem 3rem;
+}
+
+.menu-buttons__link--border {
+    border: 1px solid var(--white-color);
+    border-radius: 4rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-buttons__link--border:hover {
+    background-color: var(--white-color);
+    color: var(--dark-gray-color);
 }
