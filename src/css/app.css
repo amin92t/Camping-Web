@@ -3,10 +3,12 @@
     --light-gray-color: #707070;
     --white-color: #ffffff;
     --primary_color: #E76F51;
+    --bg-color: #FAF4F2;
 }
 
 html {
     font-size: 62.5%;
+    background-color: var(--bg-color);
 }
 
 *,
@@ -47,6 +49,7 @@ a {
     border-bottom-right-radius: 10rem;
     height: 80vh;
     position: relative;
+    z-index: -1;
 }
 
 /* ******************** */
@@ -283,4 +286,51 @@ a {
     background-color: var(--primary_color);
     color: var(--white-color);
 
+}
+
+
+/* ******************** */
+/*       services       */
+/* ******************** */
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -10rem;
+}
+
+.service {
+    background-color: var(--white-color);
+
+    margin-bottom: 1.4rem;
+    padding: 5rem 2rem;
+    border-radius: 2rem;
+    max-width: 26rem;
+    height: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.service__icon {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.service__title {
+    font-family: "Archivo-Black";
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.service__caption {
+    max-width: 20rem;
+    text-align: center;
+    font-size: 1rem;
 }
