@@ -31,6 +31,11 @@ a {
     text-decoration: none;
 }
 
+.btn {
+    padding: 1rem 6rem;
+    border-radius: 5rem;
+}
+
 /* ******************** */
 /*       Header         */
 /* ******************** */
@@ -243,4 +248,39 @@ a {
 .menu-buttons__link--border:hover {
     background-color: var(--white-color);
     color: var(--dark-gray-color);
+}
+
+/* ******************** */
+/*    Header-content    */
+/* ******************** */
+
+.header-content {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-content__title {
+    font-family: "Archivo-Black";
+    font-size: 4rem;
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 30rem;
+}
+
+.header-content__caption {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 31rem;
+}
+
+.header-content__btn {
+    background-color: var(--primary_color);
+    color: var(--white-color);
+
 }

@@ -68,6 +68,10 @@
      .nav-btn {
          display: none;
      }
+
+     .header-content__caption {
+         width: 45rem;
+     }
  }
 
  /* Extra large devices (large laptops and desktops, 1200px and up) */
