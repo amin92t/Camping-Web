@@ -20,6 +20,9 @@
          padding-left: 1rem;
      }
 
+     .newsletters {
+         margin: 6rem 1rem;
+     }
 
 
  }
@@ -33,6 +36,41 @@
          padding-left: 1rem;
      }
 
+     .newsletters {
+         display: flex;
+         flex-direction: row-reverse;
+         justify-content: space-between;
+         align-items: center;
+         margin: 6rem 9rem;
+     }
+
+     .newsletters__banner {
+         margin-left: auto;
+         justify-content: right;
+         width: 25rem;
+         flex-basis: auto;
+     }
+
+
+     .newsletters__content {
+         margin-left: 0;
+         text-align: left;
+         width: 45rem;
+         flex-basis: auto;
+     }
+
+     .newsletters__title {
+         max-width: 100%;
+     }
+
+     .newsletters__caption {
+         max-width: 36rem;
+         margin: 0;
+     }
+
+     .newsletters__email-box {
+         margin-top: 2rem;
+     }
 
  }
 
@@ -44,6 +82,7 @@
      .menu-buttons {
          display: none;
      }
+
 
 
  }
@@ -72,6 +111,10 @@
      .header-content__caption {
          width: 45rem;
      }
+
+     .newsletters {
+         margin: 6rem 7rem;
+     }
  }
 
  /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -81,5 +124,9 @@
          margin: 0 auto;
          padding-right: 1rem;
          padding-left: 1rem;
+     }
+
+     .newsletters {
+         margin: 6rem 1rem;
      }
  }
