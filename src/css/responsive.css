@@ -1,23 +1,10 @@
  /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
-     .container {
-         max-width: 32rem;
-         margin: 0 auto;
-         padding-right: 1rem;
-         padding-left: 1rem;
-     }
-
-
-
- }
+ @media only screen and (max-width: 600px) {}
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
      .container {
-         max-width: 58rem;
-         margin: 0 auto;
-         padding-right: 1rem;
-         padding-left: 1rem;
+         width: 58rem;
      }
 
      .newsletters {
@@ -30,10 +17,7 @@
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
      .container {
-         max-width: 75rem;
-         margin: 0 auto;
-         padding-right: 1rem;
-         padding-left: 1rem;
+         width: 72rem;
      }
 
      .newsletters {
@@ -72,6 +56,14 @@
          margin-top: 2rem;
      }
 
+     .newsletters::before {
+         top: 0;
+         left: -20rem;
+         bottom: 0;
+         right: 0;
+     }
+
+
  }
 
  @media only screen and (max-width: 992px) {
@@ -83,6 +75,11 @@
          display: none;
      }
 
+     .footer-scroll {
+         left: 0;
+         right: 0;
+         margin: 0 auto;
+     }
 
 
  }
@@ -90,10 +87,7 @@
  /* Large devices (laptops/desktops, 992px and up) */
  @media only screen and (min-width: 992px) {
      .container {
-         max-width: 98rem;
-         margin: 0 auto;
-         padding-right: 1rem;
-         padding-left: 1rem;
+         width: 96rem;
      }
 
      .menu-mobile {
@@ -115,18 +109,50 @@
      .newsletters {
          margin: 6rem 7rem;
      }
+
+     .footer__content {
+         display: flex;
+         flex-wrap: nowrap;
+         justify-content: space-between;
+     }
+
+     .footer__caption {
+         width: 35rem;
+         flex-basis: 40%;
+     }
+
+     .footer__menus {
+         width: 60rem;
+         flex-basis: 50%;
+         justify-content: flex-end;
+     }
+
+     .footer-scroll {
+         right: 10rem;
+     }
+
+     .newsletters::before {
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+     }
+
  }
 
  /* Extra large devices (large laptops and desktops, 1200px and up) */
  @media only screen and (min-width: 1200px) {
      .container {
-         max-width: 114rem;
-         margin: 0 auto;
-         padding-right: 1rem;
-         padding-left: 1rem;
+         width: 114rem;
      }
 
      .newsletters {
          margin: 6rem 1rem;
      }
+
+     .footer-scroll {
+         right: 4rem;
+     }
+
+
  }

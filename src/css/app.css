@@ -10,6 +10,7 @@
 html {
     font-size: 62.5%;
     background-color: var(--bg-color);
+    scroll-behavior: smooth;
 }
 
 *,
@@ -24,6 +25,7 @@ body {
     font-family: "Roboto-Regular";
     font-size: 1.4rem;
     line-height: 1.2;
+    overflow-x: hidden;
 }
 
 ul {
@@ -37,6 +39,15 @@ a {
 .btn {
     padding: 1rem 6rem;
     border-radius: 5rem;
+}
+
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
 }
 
 /* ******************** */
@@ -344,6 +355,31 @@ a {
     text-align: center;
     margin-top: 6rem;
     margin-bottom: 6rem;
+    position: relative;
+}
+
+.destinations::after,
+.destinations::before {
+    content: " ";
+    position: absolute;
+    background-size: contain;
+    height: 50rem;
+    width: 50rem;
+    top: 0;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.destinations::after {
+    background-image: url(../img/svgs/Shape1.svg);
+    right: -40rem;
+    top: -25rem;
+}
+
+.destinations::before {
+    background-image: url(../img/svgs/Shape2.svg);
+    left: -40rem;
+    top: 50rem;
 }
 
 .destinations__icon {
@@ -454,13 +490,31 @@ a {
 
 .newsletters {
     background-color: var(--secondary-color);
-    margin: 6rem 2rem;
+    margin: 8rem 2rem;
     border-radius: 2rem;
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
+.newsletters::before {
+    content: " ";
+    position: absolute;
+    top: 20rem;
+    left: -50rem;
+    bottom: 0;
+    right: 0;
+    background: url(../img/svgs/shape3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.newsletters__content,
+.newsletters__banner {
+    z-index: 2;
+}
 
 .newsletters__content {
     text-align: center;
@@ -526,4 +580,100 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* ******************** */
+/*       Footer         */
+/* ******************** */
+
+.footer {
+    background-color: var(--secondary-color);
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    padding: 10rem 1rem 5rem 1rem;
+    position: relative;
+}
+
+.footer-scroll {
+    position: absolute;
+    top: -12rem;
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer__title {
+    font-family: "Archivo-Black";
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer__description {
+    font-family: "Roboto-Medium";
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.footer__menus {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__menu {
+    margin-right: 2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.footer__menu-title {
+    font-family: "Archivo-Black";
+    font-size: 1.4rem;
+}
+
+.footer__menu-link {
+    font-family: "Roboto-Medium";
+    font-size: 1.2rem;
+    color: var(--light-gray-color);
+}
+
+.footer-app {
+    margin-top: 2rem;
+}
+
+.footer-app__title {
+    font-family: "Archivo-Black";
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer-app__markets {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-app__link:first-child {
+    margin-right: 2rem;
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
 }
